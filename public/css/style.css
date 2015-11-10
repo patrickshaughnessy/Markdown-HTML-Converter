@@ -1,0 +1,26 @@
+h1 {
+  font-family: fantasy;
+}
+
+div.inline {
+  display: inline-block;
+  margin: 5%;
+  padding: 5%;
+  height: 400px;
+  width: 300px;
+  border: 1px solid black;
+  position: absolute;
+}
+
+#htmlDiv {
+  right: 0;
+}
+
+.ioArea {
+  height: 300px;
+  width: 200px;
+  display: inline;
+  position: absolute;
+  border: 1px solid black;
+  overflow: scroll;
+}

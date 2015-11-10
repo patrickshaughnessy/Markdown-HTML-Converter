@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  include ./includes/head.jade
+  body
+    h1 This is written in Jade
+    div.container
+      div.row
+        div.col-xs-6.inline#markdownDiv
+          p Let's put some markdown here
+          textarea.ioArea#markdownInput
+        div.col-xs-6.inline#htmlDiv
+          p Let's put the HTML here
+          div.ioArea#htmlOutputArea
+        div.col-xs-3.col-xs-offset-5
+          button#convertButton Convert!
+
+    script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+    script(src='./js/main2.js')
