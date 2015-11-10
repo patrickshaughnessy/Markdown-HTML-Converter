@@ -25,6 +25,7 @@ app.use(morgan('dev'));
 // app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.set('port', (process.env.PORT || 5000));
 app.set('view engine', 'jade');
 
 app.get('/', function(req, res){
@@ -35,8 +36,8 @@ app.post('/', function(req, res){
   res.send(marked(req.body.text));
 });
 
-// app.listen(3000);
-app.listen = function() {
-  var server = http.createServer(this);
-  return server.listen.apply(frozen-caverns-6214.herokuapp.com || 3000, arguments);
-};
+// app.listen(5000);
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
