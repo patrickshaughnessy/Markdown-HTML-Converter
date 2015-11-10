@@ -35,4 +35,8 @@ app.post('/', function(req, res){
   res.send(marked(req.body.text));
 });
 
-app.listen(3000);
+// app.listen(3000);
+app.listen = function() {
+  var server = http.createServer(this);
+  return server.listen.apply(frozen-caverns-6214.herokuapp.com || 3000, arguments);
+};
